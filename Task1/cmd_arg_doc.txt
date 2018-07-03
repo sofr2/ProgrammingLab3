@@ -1,0 +1,85 @@
+This class takes a required command line argument providing an ENA identifier. The respective metadata and genomic nucleotide sequence in FASTA format is retrieved via the ENA web API.
+
+The optional information that can be output to the screen is the following:
+1) description, 2) publication, 3) nucleotide sequence, 4) taxonomic division, 5) length of sequence, 6) sequence in FASTA format, and 7) all of the above data.
+
+Some example parameter inputs are:
+a) Given -i AF163095 -a
+
+The ENA identifier is : AF163095
+Description : Mus musculus HRAS suppressor (Hras) mRNA, complete cds.
+Publication : Molecular cloning and biological activity of a novel Ha-Ras suppressor gene predominantly expressed in skeletal muscle, heart, brain, and bone marrow by differential display using clonal mouse EC cells, ATDC5
+Sequence : 
+atggcggtaaatgattgcttcagtctgacctatcctcacaacccacacccaggagacttg
+attgaagtgttccgtccttgctatcagcactgggcactgtacttgggtgatggctacgtg
+atcaacattgcacctatagatggcattcgctcatcatttacaagtgctaagtccgtgttc
+agcacaaaggccttggtgaaaatgcagcttttgaaggatgttgtgggaaatgacacatac
+agaataaataacaagtacgacacaacataccctcctcttcctgtggaggaggtgatacaa
+cggtcagagttccctattgggcaggaagtagcctatgacttgctggtcaacaactgtgag
+cattttgtaaccttgctgcgctatggagaaggagtgtcagagcaggccaaccgagcaatc
+ggcaccatcggattggtggcagctggtattgatatcttcacattcctcggcttgtttccc
+aaaagacaaagaacgaaatattag
+	
+Taxonomic Division : MUS
+Type of Molecule : mRNA
+Sequence Length : 504
+FASTA sequence : 
+>ENA|AF163095|AF163095.1 Mus musculus HRAS suppressor (Hras) mRNA, complete cds. 
+ATGGCGGTAAATGATTGCTTCAGTCTGACCTATCCTCACAACCCACACCCAGGAGACTTG
+ATTGAAGTGTTCCGTCCTTGCTATCAGCACTGGGCACTGTACTTGGGTGATGGCTACGTG
+ATCAACATTGCACCTATAGATGGCATTCGCTCATCATTTACAAGTGCTAAGTCCGTGTTC
+AGCACAAAGGCCTTGGTGAAAATGCAGCTTTTGAAGGATGTTGTGGGAAATGACACATAC
+AGAATAAATAACAAGTACGACACAACATACCCTCCTCTTCCTGTGGAGGAGGTGATACAA
+CGGTCAGAGTTCCCTATTGGGCAGGAAGTAGCCTATGACTTGCTGGTCAACAACTGTGAG
+CATTTTGTAACCTTGCTGCGCTATGGAGAAGGAGTGTCAGAGCAGGCCAACCGAGCAATC
+GGCACCATCGGATTGGTGGCAGCTGGTATTGATATCTTCACATTCCTCGGCTTGTTTCCC
+AAAAGACAAAGAACGAAATATTAG
+
+================================================================
+
+
+b) -i AF163095 -f
+
+The ENA identifier is : AF163095
+FASTA sequence : 
+>ENA|AF163095|AF163095.1 Mus musculus HRAS suppressor (Hras) mRNA, complete cds. 
+ATGGCGGTAAATGATTGCTTCAGTCTGACCTATCCTCACAACCCACACCCAGGAGACTTG
+ATTGAAGTGTTCCGTCCTTGCTATCAGCACTGGGCACTGTACTTGGGTGATGGCTACGTG
+ATCAACATTGCACCTATAGATGGCATTCGCTCATCATTTACAAGTGCTAAGTCCGTGTTC
+AGCACAAAGGCCTTGGTGAAAATGCAGCTTTTGAAGGATGTTGTGGGAAATGACACATAC
+AGAATAAATAACAAGTACGACACAACATACCCTCCTCTTCCTGTGGAGGAGGTGATACAA
+CGGTCAGAGTTCCCTATTGGGCAGGAAGTAGCCTATGACTTGCTGGTCAACAACTGTGAG
+CATTTTGTAACCTTGCTGCGCTATGGAGAAGGAGTGTCAGAGCAGGCCAACCGAGCAATC
+GGCACCATCGGATTGGTGGCAGCTGGTATTGATATCTTCACATTCCTCGGCTTGTTTCCC
+AAAAGACAAAGAACGAAATATTAG
+
+================================================================
+
+c) -i AF163095 -d -s
+
+Sequence : 
+atggcggtaaatgattgcttcagtctgacctatcctcacaacccacacccaggagacttg
+attgaagtgttccgtccttgctatcagcactgggcactgtacttgggtgatggctacgtg
+atcaacattgcacctatagatggcattcgctcatcatttacaagtgctaagtccgtgttc
+agcacaaaggccttggtgaaaatgcagcttttgaaggatgttgtgggaaatgacacatac
+agaataaataacaagtacgacacaacataccctcctcttcctgtggaggaggtgatacaa
+cggtcagagttccctattgggcaggaagtagcctatgacttgctggtcaacaactgtgag
+cattttgtaaccttgctgcgctatggagaaggagtgtcagagcaggccaaccgagcaatc
+ggcaccatcggattggtggcagctggtattgatatcttcacattcctcggcttgtttccc
+aaaagacaaagaacgaaatattag
+
+================================================================
+d) -i BN000065 -d -p 
+
+The ENA identifier is : BN000065
+Description : TPA: Homo sapiens SMP1 gene, RHD gene and RHCE gene
+Publication : RHCE represents the ancestral RH position, while RHD is the duplicated gene
+
+================================================================
+
+e) -i BN000065 -d -l -m 
+The ENA identifier is : BN000065
+Description : TPA: Homo sapiens SMP1 gene, RHD gene and RHCE gene
+Type of Molecule : genomic DNA
+Sequence Length : 315242
+
